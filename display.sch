@@ -12331,14 +12331,9 @@ DIN A4, landscape with extra doc field</description>
 </segment>
 <segment>
 <pinref part="LCD" gate="A" pin="1"/>
-<wire x1="162.56" y1="149.86" x2="162.56" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<pinref part="LCD" gate="A" pin="5"/>
-<wire x1="162.56" y1="144.78" x2="162.56" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="149.86" x2="162.56" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="132.08" x2="162.56" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="149.86" x2="172.72" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="144.78" x2="162.56" y2="144.78" width="0.1524" layer="91"/>
-<junction x="162.56" y="144.78"/>
 <wire x1="162.56" y1="132.08" x2="154.94" y2="132.08" width="0.1524" layer="91"/>
 <junction x="162.56" y="132.08"/>
 <wire x1="154.94" y1="137.16" x2="154.94" y2="132.08" width="0.1524" layer="91"/>
@@ -12555,9 +12550,9 @@ DIN A4, landscape with extra doc field</description>
 <label x="175.26" y="137.16" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="GP5"/>
-<wire x1="180.34" y1="88.9" x2="185.42" y2="88.9" width="0.1524" layer="91"/>
-<label x="185.42" y="88.9" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="GP6"/>
+<wire x1="180.34" y1="86.36" x2="185.42" y2="86.36" width="0.1524" layer="91"/>
+<label x="185.42" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DB4" class="0">
@@ -12649,9 +12644,9 @@ DIN A4, landscape with extra doc field</description>
 <label x="208.28" y="124.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="GP6"/>
-<wire x1="180.34" y1="86.36" x2="185.42" y2="86.36" width="0.1524" layer="91"/>
-<label x="185.42" y="86.36" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="GP7"/>
+<wire x1="180.34" y1="83.82" x2="185.42" y2="83.82" width="0.1524" layer="91"/>
+<label x="185.42" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -12683,6 +12678,18 @@ DIN A4, landscape with extra doc field</description>
 <wire x1="35.56" y1="93.98" x2="35.56" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="91.44" x2="33.02" y2="91.44" width="0.1524" layer="91"/>
 <label x="33.02" y="91.44" size="1.778" layer="95" rot="MR0" xref="yes"/>
+</segment>
+</net>
+<net name="RDWR" class="0">
+<segment>
+<pinref part="LCD" gate="A" pin="5"/>
+<wire x1="172.72" y1="149.86" x2="172.72" y2="139.7" width="0.1524" layer="91"/>
+<label x="172.72" y="137.16" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="GP5"/>
+<wire x1="180.34" y1="88.9" x2="185.42" y2="88.9" width="0.1524" layer="91"/>
+<label x="185.42" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
