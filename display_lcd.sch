@@ -11835,6 +11835,16 @@ A row of pins for board to board/wire connections.</description>
 <text x="-2.54" y="1.905" size="1.27" layer="21">&gt;NAME</text>
 <text x="-2.54" y="-3.175" size="1.27" layer="21">&gt;VALUE</text>
 </package>
+<package name="TRIM3MM">
+<pad name="A" x="-2.54" y="0" drill="0.8"/>
+<pad name="B" x="2.54" y="0" drill="0.8"/>
+<pad name="C" x="0" y="2.54" drill="0.8"/>
+<wire x1="-3.81" y1="3.81" x2="-3.81" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-3.81" x2="3.81" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-3.81" x2="3.81" y2="3.81" width="0.127" layer="21"/>
+<wire x1="3.81" y1="3.81" x2="-3.81" y2="3.81" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="1.79605" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PINHD18">
@@ -11873,6 +11883,19 @@ A row of pins for board to board/wire connections.</description>
 <text x="-3.302" y="-1.016" size="1.27" layer="95">2</text>
 <text x="-6.858" y="3.556" size="1.778" layer="95">&gt;NAME</text>
 <text x="-6.858" y="-5.334" size="1.778" layer="95">&gt;VALUE</text>
+</symbol>
+<symbol name="TRIMMER">
+<description>Trimmer</description>
+<wire x1="-1.27" y1="5.08" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="5.08" width="0.254" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="-1.27" y2="5.08" width="0.254" layer="94"/>
+<pin name="A" x="0" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="C" x="5.08" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="B" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<wire x1="2.54" y1="0" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<text x="-5.08" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="95" rot="R90">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -11918,6 +11941,23 @@ A row of pins for board to board/wire connections.</description>
 <connects>
 <connect gate="A" pin="1" pad="P1"/>
 <connect gate="A" pin="2" pad="P2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TRIM3MM">
+<gates>
+<gate name="G$1" symbol="TRIMMER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TRIM3MM">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -11983,6 +12023,75 @@ DIN A4, landscape with extra doc field</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="transistor-npn">
+<description>&lt;b&gt;NPN Transistors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="TO92">
+<description>&lt;b&gt;TO 92&lt;/b&gt;</description>
+<wire x1="-2.0946" y1="-1.651" x2="-2.6549" y2="-0.254" width="0.127" layer="21" curve="-32.78104"/>
+<wire x1="-2.6549" y1="-0.254" x2="-0.7863" y2="2.5485" width="0.127" layer="21" curve="-78.318477"/>
+<wire x1="0.7863" y1="2.5484" x2="2.0945" y2="-1.651" width="0.127" layer="21" curve="-111.09954"/>
+<wire x1="-2.0945" y1="-1.651" x2="2.0945" y2="-1.651" width="0.127" layer="21"/>
+<wire x1="-2.2537" y1="-0.254" x2="-0.2863" y2="-0.254" width="0.127" layer="51"/>
+<wire x1="-2.6549" y1="-0.254" x2="-2.2537" y2="-0.254" width="0.127" layer="21"/>
+<wire x1="-0.2863" y1="-0.254" x2="0.2863" y2="-0.254" width="0.127" layer="21"/>
+<wire x1="2.2537" y1="-0.254" x2="2.6549" y2="-0.254" width="0.127" layer="21"/>
+<wire x1="0.2863" y1="-0.254" x2="2.2537" y2="-0.254" width="0.127" layer="51"/>
+<wire x1="-0.7863" y1="2.5485" x2="0.7863" y2="2.5485" width="0.127" layer="51" curve="-34.293591"/>
+<pad name="1" x="1.27" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="0" y="1.905" drill="0.8128" shape="octagon"/>
+<pad name="3" x="-1.27" y="0" drill="0.8128" shape="octagon"/>
+<text x="3.175" y="0.635" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.175" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-0.635" y="0.635" size="1.27" layer="51" ratio="10">2</text>
+<text x="-2.159" y="0" size="1.27" layer="51" ratio="10">3</text>
+<text x="1.143" y="0" size="1.27" layer="51" ratio="10">1</text>
+</package>
+</packages>
+<symbols>
+<symbol name="NPN">
+<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
+<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BC547*" prefix="Q">
+<description>&lt;b&gt;NPN Transistor&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="NPN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO92">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+<technology name="A"/>
+<technology name="B"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -12023,6 +12132,11 @@ DIN A4, landscape with extra doc field</description>
 <part name="R3" library="resistor" deviceset="R-EU_" device="0204/7" value="10K"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="0204/7" value="10K"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="0204/7" value="22K"/>
+<part name="Q1" library="transistor-npn" deviceset="BC547*" device=""/>
+<part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="R6" library="resistor" deviceset="R-EU_" device="0204/7" value="10K"/>
+<part name="U$1" library="cyberspice" deviceset="TRIM3MM" device="" value="10K"/>
+<part name="R7" library="resistor" deviceset="R-EU_" device="0204/7" value="220"/>
 <part name="C3" library="resistor" deviceset="CPOL-EU" device="E2,5-6E" value="10uF"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 </parts>
@@ -12068,6 +12182,15 @@ DIN A4, landscape with extra doc field</description>
 <instance part="R3" gate="G$1" x="124.46" y="71.12" rot="R90"/>
 <instance part="R4" gate="G$1" x="134.62" y="71.12" rot="R90"/>
 <instance part="R5" gate="G$1" x="33.02" y="81.28" rot="R90"/>
+<instance part="Q1" gate="G$1" x="203.2" y="137.16" smashed="yes" rot="MR0">
+<attribute name="NAME" x="208.28" y="139.7" size="1.778" layer="95" rot="MR0"/>
+</instance>
+<instance part="GND8" gate="1" x="200.66" y="127"/>
+<instance part="R6" gate="G$1" x="208.28" y="132.08" rot="R270"/>
+<instance part="U$1" gate="G$1" x="154.94" y="142.24" smashed="yes">
+<attribute name="VALUE" x="152.4" y="139.7" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="R7" gate="G$1" x="180.34" y="134.62"/>
 <instance part="C3" gate="G$1" x="63.5" y="33.02"/>
 <instance part="GND2" gate="1" x="119.38" y="140.716"/>
 </instances>
@@ -12169,7 +12292,12 @@ DIN A4, landscape with extra doc field</description>
 <segment>
 <pinref part="LCD" gate="A" pin="1"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="162.56" y1="149.86" x2="162.56" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="149.86" x2="162.56" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="132.08" x2="162.56" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="132.08" x2="154.94" y2="132.08" width="0.1524" layer="91"/>
+<junction x="162.56" y="132.08"/>
+<wire x1="154.94" y1="137.16" x2="154.94" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="B"/>
 </segment>
 <segment>
 <pinref part="PWR" gate="A" pin="2"/>
@@ -12188,6 +12316,11 @@ DIN A4, landscape with extra doc field</description>
 <pinref part="C3" gate="G$1" pin="-"/>
 <wire x1="63.5" y1="27.94" x2="63.5" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="25.4" x2="53.34" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Q1" gate="G$1" pin="E"/>
+<wire x1="200.66" y1="132.08" x2="200.66" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -12211,11 +12344,18 @@ DIN A4, landscape with extra doc field</description>
 <pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<wire x1="149.86" y1="134.62" x2="149.86" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="134.62" x2="149.86" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 <pinref part="LCD" gate="A" pin="2"/>
+<wire x1="149.86" y1="149.86" x2="149.86" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="149.86" x2="165.1" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="134.62" x2="149.86" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="149.86" x2="154.94" y2="149.86" width="0.1524" layer="91"/>
+<junction x="149.86" y="149.86"/>
+<pinref part="U$1" gate="G$1" pin="A"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="165.1" y1="134.62" x2="175.26" y2="134.62" width="0.1524" layer="91"/>
+<junction x="165.1" y="134.62"/>
 </segment>
 <segment>
 <pinref part="J1" gate="A" pin="2"/>
@@ -12455,6 +12595,48 @@ DIN A4, landscape with extra doc field</description>
 <wire x1="38.1" y1="88.9" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="88.9" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="LCD" gate="A" pin="16"/>
+<pinref part="Q1" gate="G$1" pin="C"/>
+<wire x1="200.66" y1="149.86" x2="200.66" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="Q1" gate="G$1" pin="B"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="205.74" y1="137.16" x2="208.28" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BL" class="0">
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="127" x2="208.28" y2="124.46" width="0.1524" layer="91"/>
+<label x="208.28" y="124.46" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="GP7"/>
+<wire x1="180.34" y1="83.82" x2="185.42" y2="83.82" width="0.1524" layer="91"/>
+<label x="185.42" y="83.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="LCD" gate="A" pin="3"/>
+<wire x1="167.64" y1="149.86" x2="167.64" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="C"/>
+<wire x1="160.02" y1="142.24" x2="167.64" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="134.62" x2="198.12" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="LCD" gate="A" pin="15"/>
+<wire x1="198.12" y1="134.62" x2="198.12" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DOUT" class="0">
